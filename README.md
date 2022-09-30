@@ -1,3 +1,3 @@
 # Simeon Game
 
-A game that requoires your retentive abilities.
+A game that requires your retentive abilities.
