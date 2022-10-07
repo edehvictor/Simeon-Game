@@ -1,5 +1,6 @@
 const levelElement = document.getElementById('level-title')
 const buttonColors = ['green', 'red', 'blue', 'yellow']
+const begin =document.querySelector('.begin')
 let computerPattern = []
 let userPattern = []
 let level = 0
@@ -49,12 +50,20 @@ function animateButton(color) {
 
 
 // Start Game 
-document.addEventListener('keydown', () => {
+// document.addEventListener('keydown', () => {
+//     if (!started) {
+//         getNextPattern();
+//         started = true;
+//     }
+// })
+
+begin.addEventListener('click', ()=>{
     if (!started) {
         getNextPattern();
         started = true;
     }
 })
+
 
 //Get user user pattern
 const buttonELements = document.querySelectorAll('.btn')
@@ -87,7 +96,7 @@ function validatePattern(lastUserSelection) {
         const wrongAudio = new Audio('assets/sounds/wrong.mp3');
         wrongAudio.play();
 
-        levelElement.textContent = 'Gave over ! press Any Key To Restart.' 
+        levelElement.textContent = 'Gave over ! press The Button To Restart.' 
 
         document.querySelector('body').classList.add('game-over');
         setTimeout(() => {
